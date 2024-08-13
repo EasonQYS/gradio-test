@@ -1,7 +1,5 @@
-import os,random
-
-num = random.randint(1000,9999)
-base_path = './model1'
+import os
+base_path = './model'
 
 if os.path.exists(base_path):
     print("文件已存在:", base_path)
@@ -9,12 +7,10 @@ if os.path.exists(base_path):
 else:
     os.system('git lfs install')
     os.system(f'git lfs clone https://code.openxlab.org.cn/yisheng/snh_pocket48.git {base_path}')
+    os.system('cd {base_path} && git lfs install')
     print('********git clone***********')
     os.system(f'cd {base_path} && git lfs pull')
     print('***************pull finish**********')
-
-print(os.system("ls ./"))
-print(os.system("ls ./model1"))
 
 import copy
 import warnings
@@ -238,7 +234,7 @@ def main():
     print('load model end.')
 
 
-    st.title('InternLM2-Chat-1.8B')
+    st.title('SNH48口袋房间聊天室（冷酷版）（建议点击Clear Chat History使用）')
 
     generation_config = prepare_generation_config()
 
