@@ -11,7 +11,7 @@ else:
 
 print(os.system("ls ./"))
 print(os.system("ls ./model"))
-
+'''
 from lmdeploy.serve.gradio.turbomind_coupled import run_local
 from lmdeploy.messages import TurbomindEngineConfig
 
@@ -289,4 +289,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-'''
+
