@@ -6,9 +6,9 @@ os.system(f'git clone https://code.openxlab.org.cn/yisheng/snh_pocket48.git {bas
 os.system(f'cd {base_path} && git lfs pull')
 
 print(os.system("pwd"))
-print(os.system("./"))
-print(os.system("./model"))
-print(os.system("./model/snh_pocket48"))
+print(os.system("ls ./"))
+print(os.system("ls ./model"))
+print(os.system("ls ./model/snh_pocket48"))
 
 
 import copy
@@ -28,7 +28,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
 logger = logging.get_logger(__name__)
 
 
-model_name_or_path = "./snh_pocket48"
+model_name_or_path = "./model"
 
 @dataclass
 class GenerationConfig:
