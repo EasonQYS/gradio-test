@@ -38,7 +38,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
 logger = logging.get_logger(__name__)
 
 
-model_name_or_path = "./model"
+model_name_or_path = base_path
 
 @dataclass
 class GenerationConfig:
