@@ -1,6 +1,7 @@
-import os
+import os,random
 
-base_path = './model'
+num = random.randint(1000,9999)
+base_path = './model'+str(num)
 
 if os.path.exists(base_path):
     print("文件已存在:", base_path)
