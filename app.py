@@ -248,7 +248,7 @@ def main():
             st.markdown(message['content'])
 
     # Accept user input
-    if prompt := st.chat_input('What is up?'):
+    if prompt := st.chat_input('有什么想跟我说的吗？(我超冷酷的)'):
         # Display user message in chat message container
         with st.chat_message('user'):
             st.markdown(prompt)
