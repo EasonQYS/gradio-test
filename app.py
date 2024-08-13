@@ -1,6 +1,7 @@
 import os
 
 base_path = './model'
+os.system('git lfs install')
 os.system(f'git clone https://code.openxlab.org.cn/yisheng/snh_pocket48.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
