@@ -5,6 +5,12 @@ os.system('git lfs install')
 os.system(f'git clone https://code.openxlab.org.cn/yisheng/snh_pocket48.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
 
+print(os.system("pwd"))
+print(os.system("./"))
+print(os.system("./model"))
+print(os.system("./model/snh_pocket48"))
+
+
 import copy
 import warnings
 from dataclasses import asdict, dataclass
@@ -22,7 +28,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
 logger = logging.get_logger(__name__)
 
 
-model_name_or_path = "./model/snh_pocket48"
+model_name_or_path = "./snh_pocket48"
 
 @dataclass
 class GenerationConfig:
