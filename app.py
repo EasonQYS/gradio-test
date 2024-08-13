@@ -7,7 +7,7 @@ if os.path.exists(base_path):
 else:
     os.system('git lfs install')
     os.system(f'git lfs clone https://code.openxlab.org.cn/yisheng/snh_pocket48.git {base_path}')
-    os.system('cd {base_path} && git lfs install')
+    os.system(f'cd {base_path} && git lfs install')
     print('********git clone***********')
     os.system(f'cd {base_path} && git lfs pull')
     print('***************pull finish**********')
