@@ -1,5 +1,5 @@
-streamlit
-transformers
+#streamlit
+transformers==4.39.3
 dataclasses
 einops
 sentencepiece
