@@ -1,20 +1,20 @@
 import os,random
 
 num = random.randint(1000,9999)
-base_path = './model'#+str(num)
+base_path = './model1'
 print(base_path)
-print(os.system('git lfs version'))
-print(os.system("ls ./model"))
+#print(os.system('git lfs version'))
+print(os.system("ls ./model1"))
 if os.path.exists(base_path):
     print("文件已存在:", base_path)
     #os.system(f'rm -rf {base_path}')
 else:
-    os.system('git lfs install --force')
+    #os.system('git lfs install --force')
     os.system(f'git clone https://code.openxlab.org.cn/yisheng/snh_pocket48.git {base_path}')
     os.system(f'cd {base_path} && git lfs pull')
 
 print(os.system("ls ./"))
-print(os.system("ls ./model"))
+print(os.system("ls ./model1"))
 '''
 from lmdeploy.serve.gradio.turbomind_coupled import run_local
 from lmdeploy.messages import TurbomindEngineConfig
