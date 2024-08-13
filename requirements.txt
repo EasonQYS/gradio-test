@@ -1,5 +1,6 @@
 streamlit
 transformers
 dataclasses
+einops
 #lmdeploy[serve]
 #gradio==3.32.0
