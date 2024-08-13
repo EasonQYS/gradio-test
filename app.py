@@ -10,7 +10,14 @@ print(os.system("ls ./"))
 print(os.system("ls ./model"))
 print(os.system("ls ./model/snh_pocket48"))
 
+from lmdeploy.serve.gradio.turbomind_coupled import run_local
+from lmdeploy.messages import TurbomindEngineConfig
 
+backend_config = TurbomindEngineConfig(max_batch_size=8)
+model_path = './model'
+run_local(model_path, backend_config=backend_config, server_name="SNH48-Pocket48-Chat")
+
+'''
 import copy
 import warnings
 from dataclasses import asdict, dataclass
@@ -280,3 +287,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''
