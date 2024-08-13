@@ -1,5 +1,7 @@
 # streamlit-test
-应用启动需要20分钟左右
+应用启动需要10-15分钟左右.
+
+地址：https://openxlab.org.cn/apps/detail/yisheng/steamlit-gpu
 
 这个测试仓库用于测试SNH48口袋48模型微调后的InternLM2.5-7B-chat模型。需要torch==2.1.2以避免RuntimeError: "triu_tril_cuda_template" not implemented for 'BFloat16'(https://github.com/meta-llama/llama3/issues/110)
 
