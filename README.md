@@ -8,3 +8,7 @@ WARNING: 'git lfs clone' is deprecated and will not be updated
 speeds to 'git lfs clone'.
 
 OSError: You seem to have cloned a repository without having git-lfs installed. Please install git-lfs and run `git lfs install` followed by `git lfs pull` in the folder you cloned.
+
+python=3.10 gradio=3.50.2 streamlit=1.32.0 torch=2.1.2
+
+Nvidia A1024GB  8vCPU32GB
