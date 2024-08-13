@@ -5,7 +5,7 @@ base_path = './model'#+str(num)
 
 if os.path.exists(base_path):
     print("文件已存在:", base_path)
-    os.system(f'rm -rf {base_path}')
+    #os.system(f'rm -rf {base_path}')
 os.system('git lfs install --force')
 os.system(f'git clone https://code.openxlab.org.cn/yisheng/snh_pocket48.git {base_path}')
 os.system(f'cd {base_path} && git lfs pull')
