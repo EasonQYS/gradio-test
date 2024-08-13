@@ -1,20 +1,22 @@
 import os
 
 base_path = './model'
-os.system('git lfs install')
-os.system(f'git clone https://code.openxlab.org.cn/yisheng/snh_pocket48.git {base_path}')
-os.system(f'cd {base_path} && git lfs pull')
 
-print(os.system("pwd"))
+if os.path.exists(base_path):
+    print("文件已存在:", base_path)
+else:
+    os.system('git lfs install')
+    os.system(f'git clone https://code.openxlab.org.cn/yisheng/snh_pocket48.git {base_path}')
+    os.system(f'cd {base_path} && git lfs pull')
+
 print(os.system("ls ./"))
 print(os.system("ls ./model"))
-print(os.system("ls ./model/snh_pocket48"))
 
 from lmdeploy.serve.gradio.turbomind_coupled import run_local
 from lmdeploy.messages import TurbomindEngineConfig
 
 backend_config = TurbomindEngineConfig(max_batch_size=8)
-model_path = './model'
+model_path = base_path
 run_local(model_path, backend_config=backend_config, server_name="SNH48-Pocket48-Chat")
 
 '''
